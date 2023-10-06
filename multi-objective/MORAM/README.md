@@ -3,7 +3,6 @@
 **If this repository is helpful for your research, please cite our paper:<br />**
 ```
 "Zhenkun Wang,  Shunyu Yao, Genghui Li, Qingfu Zhang, Multi-objective Combinatorial Optimization Using A Single Deep Reinforcement Learning Model, IEEE Transactions on Cybernetics, in press, 2023."
-
 ```
 **OR**
 ```
