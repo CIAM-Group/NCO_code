@@ -1,6 +1,6 @@
 # Copyright (c) 2023 CIAM Group
 **The code can only be used for non-commercial purposes. Please contact the authors if you want to use this code for other purposes.**  
-**All publications using this code should properly cite the reference:<br />**
+**All publications using this code should properly cite the paper:<br />**
 **"Fu Luo, Xi Lin, Fei Liu, Qingfu Zhang, and Zhenkun Wang, Neural Combinatorial Optimization with Heavy Decoder: Toward Large Scale Generalization, The 37th Anniversary Conference on Neural Information Processing Systems, NeurIPS 2023"**
 ****
 This paper develops a model with a Light Encoder and a Heavy Decoder for learning to solve TSP and CVRP. 
