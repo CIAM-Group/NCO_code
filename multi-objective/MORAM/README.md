@@ -2,7 +2,7 @@
 **The code can only be used for non-commercial purposes. Please contact the authors if you want to use this code for other purposes.**  
 **If this repository is helpful for your research, please cite our paper:<br />**
 ```
-*"Zhenkun Wang,  Shunyu Yao, Genghui Li, Qingfu Zhang, Multi-objective Combinatorial Optimization Using A Single Deep Reinforcement Learning Model, IEEE Transactions on Cybernetics, in press, 2023."*<br />
+*"Zhenkun Wang,  Shunyu Yao, Genghui Li, Qingfu Zhang, Multi-objective Combinatorial Optimization Using A Single Deep Reinforcement Learning Model, IEEE Transactions on Cybernetics, in press, 2023."<br />*
 OR<br />
 @article{wang2023multiobjective,
   title={Multiobjective Combinatorial Optimization Using a Single Deep Reinforcement Learning Model},
