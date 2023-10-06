@@ -2,12 +2,14 @@
 **The code can only be used for non-commercial purposes. Please contact the authors if you want to use this code for other purposes.**  
 **If this repository is helpful for your research, please cite our paper:<br />**
 **"Fu Luo, Xi Lin, Fei Liu, Qingfu Zhang, and Zhenkun Wang, Neural Combinatorial Optimization with Heavy Decoder: Toward Large Scale Generalization, The 37th Anniversary Conference on Neural Information Processing Systems, NeurIPS 2023"**
-@@article{ding2022free,
+```
+@article{ding2022free,
   title={Free Lunch for Surgical Video Understanding by Distilling Self-Supervisions},
   author={Ding, Xinpeng and Liu, Ziwei and Li, Xiaomeng},
   journal={arXiv preprint arXiv:2205.09292},
   year={2022}
 }
+```
 ****
 This code can develop an NCO model with a Light Encoder and a Heavy Decoder for solving TSP and CVRP. 
 
