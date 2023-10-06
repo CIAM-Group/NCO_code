@@ -3,11 +3,12 @@
 **If this repository is helpful for your research, please cite our paper:<br />**
 **"Fu Luo, Xi Lin, Fei Liu, Qingfu Zhang, and Zhenkun Wang, Neural Combinatorial Optimization with Heavy Decoder: Toward Large Scale Generalization, The 37th Anniversary Conference on Neural Information Processing Systems, NeurIPS 2023"**
 ```
-@article{ding2022free,
-  title={Free Lunch for Surgical Video Understanding by Distilling Self-Supervisions},
-  author={Ding, Xinpeng and Liu, Ziwei and Li, Xiaomeng},
+@inproceddings{luo2023neural,
+  title={Neural Combinatorial Optimization with Heavy Decoder: Toward Large Scale Generalization},
+  author={Fu Luo, Xi Lin, Fei Liu, Qingfu Zhang, Zhenkun Wang},
   journal={arXiv preprint arXiv:2205.09292},
-  year={2022}
+  booktitle={The 37th Anniversary Conference on Neural Information Processing Systems, NeurIPS 2023},
+  year={2023}
 }
 ```
 ****
