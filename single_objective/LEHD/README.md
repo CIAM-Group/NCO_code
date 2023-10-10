@@ -30,9 +30,13 @@ We don't use any hard-to-install packages.
 If any package is missing, just install it following the prompts.
 
 ## Download the datasets
-Here is the download link for the TSP/CVRP training/testing data:
+The training and test datasets can be downloaded from Google Drive:
 ```bash
 https://drive.google.com/drive/folders/1LptBUGVxQlCZeWVxmCzUOf9WPlsqOROR?usp=sharing
+```
+or  Baidu Cloud:
+```bash
+https://pan.baidu.com/s/12uxjol_5pAlnm0j4F6D_RQ?pwd=rzja
 ```
 - For TSP, download the training/testing datasets and put them to the path <LEHD_main/TSP/data>.
 
