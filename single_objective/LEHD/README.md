@@ -32,7 +32,7 @@ If any package is missing, just install it following the prompts.
 ## Download the datasets
 Here is the download link for the TSP/CVRP training/testing data:
 ```bash
-https://www.aliyundrive.com/s/CgG4fxY8vWK
+https://drive.google.com/drive/folders/1LptBUGVxQlCZeWVxmCzUOf9WPlsqOROR?usp=sharing
 ```
 - For TSP, download the training/testing datasets and put them to the path <LEHD_main/TSP/data>.
 
