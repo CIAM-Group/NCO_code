@@ -10,5 +10,5 @@ https://drive.google.com/drive/folders/1ByJJuzzSTvydU1RgF0nvDqvt1__mLEDt
 ```
 
 ## Acknowledgements
-SL-DABL's code implementation is based on the code of [POMO](https://github.com/yd-kwon/POMO/tree/master/NEW_py_ver) and [AM](https://github.com/wouterkool/attention-learn-to-route/tree/master).
+SL-DABL's code implementation is based on [POMO](https://github.com/yd-kwon/POMO/tree/master/NEW_py_ver) and [AM](https://github.com/wouterkool/attention-learn-to-route/tree/master).
 Thanks to them.
