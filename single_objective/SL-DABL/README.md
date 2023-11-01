@@ -6,7 +6,7 @@
 ## Download the datasets
 The training and test datasets can be downloaded from Google Drive:
 ```bash
-https://drive.google.com/drive/folders/1ByJJuzzSTvydU1RgF0nvDqvt1__mLEDt?usp=drive_link
+https://drive.google.com/drive/folders/1ByJJuzzSTvydU1RgF0nvDqvt1__mLEDt?usp=sharing
 ```
 
 ## Acknowledgements
