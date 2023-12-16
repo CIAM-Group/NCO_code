@@ -47,14 +47,14 @@ class RoutingNet(nn.Module):
     def __init__(self, num_objs, hidden_dim):
         super(RoutingNet, self).__init__()
 
-        self.embedding = nn.Linear(num_objs+1, hidden_dim)
+        self.embeding = nn.Linear(num_objs+1, hidden_dim)
         self.relu = nn.ReLU()
         self.output = nn.Linear(hidden_dim, num_objs+1)
         self.tanh = nn.Tanh()
 
     def forward(self, w):
         w = torch.cat([w, torch.zeros_like(w[:, 0].unsqueeze(-1), device=w.device)], dim=1)
-        w_emb = self.embedding(w)
+        w_emb = self.embeding(w)
         w_emb = self.output(self.relu(w_emb)) + w
         w_emb = self.tanh(w_emb)
         return w_emb
