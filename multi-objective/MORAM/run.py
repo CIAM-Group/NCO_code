@@ -163,7 +163,7 @@ def run(opts):
     )
 
     # Load optimizer state
-    if 'optimizer' in load_data and not opts.load_encoder:
+    if 'optimizer' in load_data:
         optimizer.load_state_dict(load_data['optimizer'])
         for state in optimizer.state.values():
             for k, v in state.items():
