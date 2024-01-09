@@ -14,3 +14,5 @@
 ```
 ****
 This code is heavily based on the [attention-learn-to-route repository](https://github.com/wouterkool/attention-learn-to-route).
+
+Note: All experiments (including training and testing) in this paper are conducted on 1 Tesla V100 GPU, except for MORAM, which is trained in parallel on 2 GPUs due to memory limitation. The statistical unit used for comparing training times is GPU hour.
