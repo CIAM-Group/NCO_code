@@ -1,9 +1,9 @@
 
 from logging import getLogger
 import torch
-from LEHD_main.CVRP.VRPModel import VRPModel as Model
-from LEHD_main.CVRP.VRPEnv import VRPEnv as Env
-from LEHD_main.utils.utils import *
+from LEHD.CVRP.VRPModel import VRPModel as Model
+from LEHD.CVRP.VRPEnv import VRPEnv as Env
+from LEHD.utils.utils import *
 # os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 
 class VRPTester():
