@@ -10,8 +10,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, "..")
 sys.path.insert(0, "../..")
 import logging
-from LEHD_main.utils.utils import create_logger, copy_all_src
-from LEHD_main.TSP.TSPTrainer import TSPTrainer as Trainer
+from LEHD.utils.utils import create_logger, copy_all_src
+from LEHD.TSP.TSPTrainer import TSPTrainer as Trainer
 
 ##########################################################################################
 # parameters
