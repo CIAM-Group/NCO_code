@@ -12,8 +12,8 @@ sys.path.insert(0, "..")  # for problem_def
 sys.path.insert(0, "../..")  # for utils
 import logging
 import numpy as np
-from LEHD_main.utils.utils import create_logger, copy_all_src
-from LEHD_main.CVRP.VRPTester import VRPTester as Tester
+from LEHD.utils.utils import create_logger, copy_all_src
+from LEHD.CVRP.VRPTester import VRPTester as Tester
 
 ##########################################################################################
 # parameters
