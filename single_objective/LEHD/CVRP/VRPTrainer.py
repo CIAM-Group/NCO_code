@@ -5,10 +5,10 @@ import torch
 from torch.optim import Adam as Optimizer
 from torch.optim.lr_scheduler import MultiStepLR as Scheduler
 
-from LEHD_main.CVRP.VRPModel import VRPModel as Model
-from LEHD_main.CVRP.test import main_test
-from LEHD_main.CVRP.VRPEnv import VRPEnv as Env
-from LEHD_main.utils.utils import *
+from LEHD.CVRP.VRPModel import VRPModel as Model
+from LEHD.CVRP.test import main_test
+from LEHD.CVRP.VRPEnv import VRPEnv as Env
+from LEHD.utils.utils import *
 
 class VRPTrainer:
     def __init__(self,
