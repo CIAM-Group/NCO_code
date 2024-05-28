@@ -46,8 +46,15 @@ def get_options(args=None):
     parser.add_argument('--max_grad_norm', type=float, default=0,
                         help='Maximum L2 norm for gradient clipping, default 1.0 (0 to disable clipping)')
     parser.add_argument('--no_cuda', action='store_true', help='Disable CUDA')
-    parser.add_argument('--eval_batch_size', type=int, default=1,
+
+    # Eval
+    parser.add_argument('--eval_batch_size', type=int, default=20,
                         help="Batch size to use during evaluation")
+    parser.add_argument('--aug_eval', type=int, default=8, help="Number of augmentations in evaluation")
+    parser.add_argument('--agent_list', default=[3, 5, 7, 10], help="Number of M in evaluation")
+    parser.add_argument('--depot_eval', default=1, help="Number of D in evaluation")
+    parser.add_argument('--r_eval', type=int, default=16, help="Number of permutations in evaluation")
+
     parser.add_argument('--checkpoint_encoder', action='store_true',
                         help='Set to decrease memory usage by checkpointing encoder')
     parser.add_argument('--shrink_size', type=int, default=None,
@@ -63,8 +70,7 @@ def get_options(args=None):
                         help='Start at epoch # (relevant for learning rate decay)')
     parser.add_argument('--checkpoint_epochs', type=int, default=1,
                         help='Save checkpoint every n epochs (default 1), 0 to save no checkpoints')
-    # parser.add_argument('--load_path', help='Path to load model parameters and optimizer state from') #, default='pretrained/mtsp/mtsp50/epoch-100.pt'
-    parser.add_argument('--load_path', help='Path to load model parameters and optimizer state from')
+    parser.add_argument('--load_path', help='Path to load model parameters and optimizer state from') # , default='pretrained/mtsp/mtsp100/mTSP-100.pt'
     parser.add_argument('--resume', help='Resume from previous checkpoint file')
     parser.add_argument('--no_progress_bar', action='store_true', help='Disable progress bar')
 

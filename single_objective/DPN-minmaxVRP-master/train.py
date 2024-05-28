@@ -31,14 +31,13 @@ def validate(model, dataset, opts):
     print('Validating...')
     cost_file = open(os.path.join(opts.save_dir, 'gap.txt'), mode='a+')
     # for i in [1, 2, 3, 5, 7, 10, 20]:
-    for i in [5, 7, 10]:
+    for i in opts.agent_list:
         print('Validating...,with' + str(i) + 'agents\n')
         model.agent_num = i
         model.decay = 0
-        model.depot_num = 8
+        model.depot_num = opts.depot_eval
         model.embedder.agent_num = i
         cost = rollout(model, dataset, i, opts)
-        print(cost)
         avg_cost = cost.mean()
         print('Validation overall avg_cost: {} +- {}\n'.format(
             avg_cost, torch.std(cost) / math.sqrt(len(cost))))
@@ -53,7 +52,7 @@ def validate2(model, dataset, opts):
     print('Validating...')
     cost_file = open(os.path.join(opts.save_dir, 'gap2.txt'), mode='a+')
     # for i in [1, 2, 3, 5, 7, 10, 20]:
-    for i in [5, 10, 20]:
+    for i in [3, 5, 7]:
         print('Validating...,with' + str(i) + 'agents\n')
         model.agent_num = i
         model.embedder.agent_num = i
@@ -77,20 +76,20 @@ def rollout(model, dataset, i, opts):
 
     def eval_model_bat(bat, batch_size, agt, aug=8):
         with torch.no_grad():
-            agent_per = torch.arange(agt).cuda()[None, :].expand(opts.pomo_size, -1)
-            if (opts.pomo_size > 1):
+            agent_per = torch.arange(agt).cuda()[None, :].expand(opts.r_eval, -1)
+            if (opts.r_eval > 1):
                 for i in range(100):
-                    a = torch.randint(0, agt, (opts.pomo_size,)).cuda()
-                    b = torch.randint(0, agt, (opts.pomo_size,)).cuda()
-                    p = agent_per[torch.arange(opts.pomo_size), a].clone()
-                    q = agent_per[torch.arange(opts.pomo_size), b].clone()
+                    a = torch.randint(0, agt, (opts.r_eval,)).cuda()
+                    b = torch.randint(0, agt, (opts.r_eval,)).cuda()
+                    p = agent_per[torch.arange(opts.r_eval), a].clone()
+                    q = agent_per[torch.arange(opts.r_eval), b].clone()
                     agent_per = agent_per.scatter(dim=1, index=b[:, None], src=p[:, None])
                     agent_per = agent_per.scatter(dim=1, index=a[:, None], src=q[:, None])
                 agent_per[0] = torch.arange(agt).cuda()
             model.agent_per = agent_per
             cost, _, route = model(move_to(bat, opts.device), return_pi=True)
             cost, _ = cost.min(-1)
-            # route = route.view(aug * batch_size, opts.pomo_size, -1).gather(1, _[:, None, None].expand(-1, -1, route.size(-1)))
+            # route = route.view(aug * batch_size, opts.r_eval, -1).gather(1, _[:, None, None].expand(-1, -1, route.size(-1)))
             cost, _ = cost.view(aug, -1).min(0, keepdim=True)
             # code related to printing a solution out
             '''
@@ -195,7 +194,7 @@ def rollout(model, dataset, i, opts):
         return cost.data.cpu()
 
     return torch.cat([
-        eval_model_bat(augment(bat, 8), batch_size=opts.eval_batch_size, agt=i)
+        eval_model_bat(augment(bat, opts.aug_eval), batch_size=opts.eval_batch_size, agt=i, aug=opts.aug_eval)
         for bat
         in tqdm(DataLoader(dataset, batch_size=opts.eval_batch_size), disable=opts.no_progress_bar)
     ], 0)
