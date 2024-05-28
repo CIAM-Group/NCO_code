@@ -43,4 +43,5 @@ python run_md.py --graph_size 100 --problem fdvrp --run_name 'fmdvrp100' --agent
 
 ### Pre-trained Model
 
-https://drive.google.com/file/d/1UWs7ajI3gHYADH5RGZn8WDKto_N46yC7/view?usp=drive_link
+https://drive.google.com/file/d/1rd-wfBSQ0aaVe8wnPE-12F6wtvXeS9hT/view?usp=sharing
+
