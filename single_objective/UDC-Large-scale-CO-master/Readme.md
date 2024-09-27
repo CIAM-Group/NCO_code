@@ -4,11 +4,11 @@
 Code for paper accepted by NeurIPS 2024:
 
 
-[**UDC: A Unified Neural Divide-and-ConquernFramework for Large-Scale Combinatorial Optimization Problems**](https://arxiv.org/abs/2407.00312)
+[**UDC: A Unified Neural Divide-and-ConquernFramework for Large-Scale Combinatorial Optimization Problems**](https://arxiv.org/pdf/2407.00312)
 
 ![UDC](UDC.png)
 
-9.26: The articles in the repository are the latest version (NOT the camera ready version yet), with significant modifications compared to the initial version of arxiv (https://arxiv.org/abs/2407.00312).
+The paper in the repository is the latest version (NOT the camera ready version yet), with significant modifications compared to the initial version of arxiv.
 
 Some of the code comes from https://github.com/yd-kwon/POMO, https://github.com/yd-kwon/MatNet, and https://github.com/henry-yeh/GLOP. Thank them for their implementations.
 
@@ -42,9 +42,11 @@ Please download test sets and pre-trained models from Google Drive https://drive
 
 Download pre-trained models and test sets to reproduce the results reported in the article.
 
+**Since the code uses $O(N^2)$ space complexity implementations in the GNN calculation to run in parallel. For test problems above 7000-node, you needs to consider putting the distance matrix, heatmap (even some space-consuming GNN operations, usually don't need) on CPU.**
+
 Randomness: there will be randomness if running two test sets in one single run or using different batch sizes.
 
-For randomly generated instances, reported results are from the max batch size on a single NVIDIA RTX 3090 GPU (e.g., 6 for CVRP500 with $\alpha=50$). We also test only one test set during a single run.
+**For randomly generated instances, reported results are from the max batch size on a single NVIDIA RTX 3090 GPU (e.g., 6 for CVRP500 with $\alpha=50$). We also test only one test set during a single run.**
 
 
 ### Further Improvement
