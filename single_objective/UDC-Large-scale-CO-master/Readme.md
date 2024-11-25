@@ -1,7 +1,8 @@
 # Readme
 
 
-**11.25: Note: At least the CVRP pre-trained model has some errors in uploading, which are being fixed.**
+**11.25: Fixed a bug in CVRP, I forgot to disable the legality check, which previously caused super low efficiency. Plan to provide better code implementation by the end of Jan 2025**
+
 Code for a paper accepted by NeurIPS 2024:
 
 [**UDC: A Unified Neural Divide-and-ConquernFramework for Large-Scale Combinatorial Optimization Problems**](https://arxiv.org/pdf/2407.00312)
