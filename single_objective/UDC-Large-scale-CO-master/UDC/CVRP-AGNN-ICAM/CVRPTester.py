@@ -472,7 +472,7 @@ class CVRPPartitionTrainer:
         tag_solution_flag[r] = n_tsps_per_route_flag.view(batch_size, aug_factor, -1, tsp_insts_now.size(-2) - 1)[r]
         solution = n_tsps_per_route.view(batch_size, aug_factor, -1, tsp_insts_now.size(-2) - 1).gather(-1, tag_solution - 1).view(solution.size(0), solution.size(1), -1)
         solution_flag = tag_solution_flag.view(solution.size(0), solution.size(1), -1)
-        self.env.cal_leagal_2dim(now_problem[:, :, -1], solution, solution_flag)
+        # self.env.cal_leagal_2dim(now_problem[:, :, -1], solution, solution_flag)
         solution_out = solution_gnn.clone()
         solution_out_flag = solution_gnn_flag.clone()
         solution_out[episode:episode + batch_size] = solution
