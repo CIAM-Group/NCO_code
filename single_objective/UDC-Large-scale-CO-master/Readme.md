@@ -1,14 +1,12 @@
 # Readme
 
 
-Code for paper accepted by NeurIPS 2024:
-
+**11.25: Note: At least the CVRP pre-trained model has some errors in uploading, which are being fixed.**
+Code for a paper accepted by NeurIPS 2024:
 
 [**UDC: A Unified Neural Divide-and-ConquernFramework for Large-Scale Combinatorial Optimization Problems**](https://arxiv.org/pdf/2407.00312)
 
 ![UDC](UDC.png)
-
-The paper in the repository is the latest version (NOT the camera ready version yet), with significant modifications compared to the initial version of arxiv.
 
 Some of the code comes from https://github.com/yd-kwon/POMO, https://github.com/yd-kwon/MatNet, and https://github.com/henry-yeh/GLOP. Thank them for their implementations.
 
