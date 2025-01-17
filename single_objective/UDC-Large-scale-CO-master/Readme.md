@@ -1,7 +1,10 @@
 # Readme
 
 
-**11.25: Fixed a bug in CVRP, I forgot to disable the legality check, which previously caused super low efficiency. Plan to provide better code implementation by the end of Jan 2025**
+**2024 11.25: Fixed a bug in CVRP, I forgot to disable the legality check, which previously caused super low efficiency. Plan to provide better code implementation by the end of Jan 2025**
+
+**2025 1.27: Thanks to the notice from Researcher [abcdhhhh](https://github.com/abcdhhhh), we realize that we misunderstood the definition of the SPCTSP and adopted an uncommon setting in the UDC paper which allows the real value of stochastic variables for a few solutions. For future researchers, please notice that the SPCTSP results are not obtained on standard SPCTSPs.**
+
 
 Code for a paper accepted by NeurIPS 2024:
 
